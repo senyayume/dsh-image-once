@@ -1,0 +1,5 @@
+# dsh-image-once 的 profile 层：由 package.json 的 dsh.bundle.patch 指向，`dsh plugin add` 时自动挂载。
+# 只有这一行宿主行；不要再往 profile 的 cordis.patch.yml 手写同 id 的 insert（会 duplicate loader entry id 回滚）。
+- insert:
+    - id: image-once
+      name: dsh-image-once
